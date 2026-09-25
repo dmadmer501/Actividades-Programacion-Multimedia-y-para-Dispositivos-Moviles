@@ -1,21 +1,23 @@
 # 01.1 · Ejercicios 1: Introducción a Kotlin
 
-> [!info] Origen
-> [[DAM/Programacion_Multimedia_y_Dispositivos_Moviles/Indice|Programación Multimedia y Dispositivos Móviles]] · Tema 1: Kotlin
-> Apuntes relacionados: [[01 - Introduccion a Kotlin]]
+> [!NOTE]
+> **Origen:**
+> Programación Multimedia y Dispositivos Móviles · Tema 1: Kotlin
+> Apuntes relacionados: 01 - Introduccion a Kotlin
 > **Ruta fuente:** `/home/Dublem/Documentos/Programas_clase/Programación Multimedia y para Dispositivos Móviles/`
 
 ---
 
 ## Índice de Ejercicios
 
-- [[#Ejercicio 1.1 · Ordenar tres números enteros por consola]]
+- [Ejercicio 1.1 · Ordenar tres números enteros por consola](#ejercicio-11-ordenar-tres-números-enteros-por-consola)
 
 ---
 
 ## Ejercicio 1.1 · Ordenar tres números enteros por consola
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Realiza un programa que solicite por consola tres números enteros, y los muestre por pantalla en orden.  
 > *Nota:* Los `if` en Kotlin tienen una estructura similar a Java. No utilices Kotlin Playground porque no permite introducir datos interactivos por consola.
 
@@ -31,7 +33,7 @@ val edad: Int = entrada.toInt()
 println("El año que viene tendrás ${edad + 1} años")
 ```
 
-### Código fuente (`Ejercicio1.1/src/Main.kt`)
+### Código fuente ([`Ejercicio1.1/src/Main.kt`](Ejercicio1.1/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -81,38 +83,40 @@ fun main() {
 | --- | --- | --- |
 | Lectura por consola | `readln()` | Devuelve una línea completa como `String` (requiere JVM, no Kotlin Playground). |
 | Parseo | `String.toInt()` / `.toDouble()` | Convierte texto a número; lanza `NumberFormatException` si no es válido. |
-| Condicionales | `if / else` anidados | En Kotlin `if` es también una expresión (visto en [[03 - Funciones]]). |
+| Condicionales | `if / else` anidados | En Kotlin `if` es también una expresión (visto en 03 - Funciones). |
 | Plantillas de cadena | `"$x"` / `"${expr}"` | Interpola variables y expresiones sin concatenar con `+`. |
 
 ---
 
 # 02.1 · Ejercicios 2: Jerarquía de Tipos
 
-> [!info] Origen
-> [[DAM/Programacion_Multimedia_y_Dispositivos_Moviles/Indice|Programación Multimedia y Dispositivos Móviles]] · Tema 2: Jerarquía de tipos
-> Apuntes relacionados: [[02 - Jerarquia de tipos]] · Boletín anterior: [[01.1 - Ejercicios 1 Introduccion a Kotlin]]
+> [!NOTE]
+> **Origen:**
+> Programación Multimedia y Dispositivos Móviles · Tema 2: Jerarquía de tipos
+> Apuntes relacionados: 02 - Jerarquia de tipos · Boletín anterior: 01.1 - Ejercicios 1 Introduccion a Kotlin
 > **Ruta fuente:** `/home/Dublem/Documentos/Programas_clase/Programación Multimedia y para Dispositivos Móviles/`
 
 ---
 
 ## Índice de Ejercicios
 
-- [[#Ejercicio 2.1 · Tipo Number y análisis de pérdida de precisión en conversiones]]
-- [[#Ejercicio 2.2 · Números gigantes con BigInteger]]
-- [[#Ejercicio 2.3 · Tipo Char, código Unicode y seguridad de tipos]]
-- [[#Ejercicio 2.4 · Rangos cerrados, abiertos, progresiones y operador in]]
-- [[#Ejercicio 2.5 · Evaluación en cortocircuito frente a evaluación completa en booleanos]]
-- [[#Ejercicio 2.6 · Procesamiento de cadenas, filtrado por código ASCII y cadenas multilínea]]
-- [[#Ejercicio 2.7 · Tipos nullables frente a no-nullables]]
-- [[#Ejercicio 2.8 · Jerarquía de tipos: Any y Any?]]
-- [[#Ejercicio 2.9 · Media de un array de notas (DoubleArray)]]
-- [[#Ejercicio 2.10 · Variable Any? con contenido aleatorio y rangos]]
+- [Ejercicio 2.1 · Tipo Number y análisis de pérdida de precisión en conversiones](#ejercicio-21-tipo-number-y-análisis-de-pérdida-de-precisión-en-conversiones)
+- [Ejercicio 2.2 · Números gigantes con BigInteger](#ejercicio-22-números-gigantes-con-biginteger)
+- [Ejercicio 2.3 · Tipo Char, código Unicode y seguridad de tipos](#ejercicio-23-tipo-char-código-unicode-y-seguridad-de-tipos)
+- [Ejercicio 2.4 · Rangos cerrados, abiertos, progresiones y operador in](#ejercicio-24-rangos-cerrados-abiertos-progresiones-y-operador-in)
+- [Ejercicio 2.5 · Evaluación en cortocircuito frente a evaluación completa en booleanos](#ejercicio-25-evaluación-en-cortocircuito-frente-a-evaluación-completa-en-booleanos)
+- [Ejercicio 2.6 · Procesamiento de cadenas, filtrado por código ASCII y cadenas multilínea](#ejercicio-26-procesamiento-de-cadenas-filtrado-por-código-ascii-y-cadenas-multilínea)
+- [Ejercicio 2.7 · Tipos nullables frente a no-nullables](#ejercicio-27-tipos-nullables-frente-a-no-nullables)
+- [Ejercicio 2.8 · Jerarquía de tipos: Any y Any?](#ejercicio-28-jerarquía-de-tipos-any-y-any)
+- [Ejercicio 2.9 · Media de un array de notas (DoubleArray)](#ejercicio-29-media-de-un-array-de-notas-doublearray)
+- [Ejercicio 2.10 · Variable Any? con contenido aleatorio y rangos](#ejercicio-210-variable-any-con-contenido-aleatorio-y-rangos)
 
 ---
 
 ## Ejercicio 2.1 · Tipo Number y análisis de pérdida de precisión en conversiones
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Realiza un programa que defina una variable de tipo `Number`, inicializada con un valor de tipo `Double`, `Float` o `Int`.  
 > Después realiza la conversión de la variable a los tres tipos hacia tres variables distintas.  
 > Finalmente, compara el valor original convertido a `Double` y el resultado de la conversión del valor original a `Int` y vuelto a convertir a `Double`, para comprobar si se ha producido pérdida de información. Haz lo mismo para comprobar si se produce pérdida al pasar a `Float`.  
@@ -135,7 +139,7 @@ val hayPerdida: Boolean = (decimal != recuperado) // true (se perdieron los deci
 println("¿Pérdida al truncar?: $hayPerdida")
 ```
 
-### Código fuente (`Ejercicio2.1/src/Main.kt`)
+### Código fuente ([`Ejercicio2.1/src/Main.kt`](Ejercicio2.1/src/Main.kt))
 
 ```kotlin
 fun analizarPerdida(original: Number) {
@@ -189,7 +193,8 @@ fun main() {
 
 ## Ejercicio 2.2 · Números gigantes con BigInteger
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Crea una variable que contenga un número entero muy grande (más de 25 dígitos) como un `String`.  
 > Convierte ese `String` a `BigInteger` usando algún método disponible.  
 > Súmale a este `BigInteger` el número 99, convertido previamente a `BigInteger` con algún método factoría disponible.  
@@ -213,7 +218,7 @@ val suma: BigInteger = big1 + big2 // Sobrecarga de operador '+'
 println("Suma exacta: $suma")
 ```
 
-### Código fuente (`Ejercicio2.2/src/Main.kt`)
+### Código fuente ([`Ejercicio2.2/src/Main.kt`](Ejercicio2.2/src/Main.kt))
 
 ```kotlin
 import java.math.BigInteger
@@ -231,7 +236,7 @@ fun main() {
 ```
 
 ### Explicación paso a paso
-1. **Límite de tipos primitivos:** Un número de más de 25 dígitos supera el valor máximo de `Long` ($2^{63}-1 \approx 9 \times 10^{18}$), por lo que provocaría desbordamiento inmediato de compilarse como primitivo.
+1. **Límite de tipos primitivos:** Un número de más de 25 dígitos supera el valor máximo de `Long` (`2^63 - 1` (≈ 9 × 10¹⁸)), por lo que provocaría desbordamiento inmediato de compilarse como primitivo.
 2. **Conversión y factoría:** Se utiliza `.toBigInteger()` sobre la cadena de texto y `BigInteger.valueOf(99L)` para el incremento pequeño.
 3. **Operador `+` sintáctico:** Gracias a la sobrecarga de operadores de Kotlin, `numeroGrandeANumero + noventaYNueve` es equivalente a la llamada Java `.add()`, manteniendo el código legible.
 
@@ -239,7 +244,8 @@ fun main() {
 
 ## Ejercicio 2.3 · Tipo Char, código Unicode y seguridad de tipos
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Crea una variable llamada `initialLetter` de tipo `Char` y asígnale el carácter `'K'`.  
 > Crea una variable `tab` de tipo `Char` y asígnale el carácter de tabulación.  
 > Crea una variable `asciiCode` de tipo `Int`. Asígnale el valor Unicode de `initialLetter` usando la propiedad adecuada de `Char`.  
@@ -265,7 +271,7 @@ if (letra.code == 65) {
 }
 ```
 
-### Código fuente (`Ejercicio2.3/src/Main.kt`)
+### Código fuente ([`Ejercicio2.3/src/Main.kt`](Ejercicio2.3/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -303,7 +309,8 @@ fun main() {
 
 ## Ejercicio 2.4 · Rangos cerrados, abiertos, progresiones y operador in
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Crea una variable llamada `closedRange` que contenga los números enteros desde 10 hasta 15, ambos inclusive, usando la sintaxis abreviada. Imprime este rango.  
 > Crea una variable llamada `openRange` que contenga las letras desde `'A'` hasta `'D'`, excluyendo `'D'`, usando la sintaxis abreviada. Recorre e imprime cada carácter dentro de este rango usando un bucle `for`.  
 > Crea una variable llamada `evenProgression` que contenga los números pares desde 20 hasta 10, en orden descendente, con un salto (paso) de 2. Recorre e imprime cada número de esta progresión.  
@@ -311,8 +318,8 @@ fun main() {
 
 ### Clases y métodos introducidos
 - `IntRange` / `CharRange`: tipos que representan secuencias acotadas de valores.
-- Operador `..`: rango cerrado (incluye ambos extremos: `a..b` $\rightarrow [a, b]$).
-- Operador `..<`: rango semiabierto (excluye el extremo final: `a..<b` $\rightarrow [a, b)$).
+- Operador `..`: rango cerrado (incluye ambos extremos: `a..b` → `[a, b]`).
+- Operador `..<`: rango semiabierto (excluye el extremo final: `a..<b` → `[a, b)`).
 - Función infija `downTo`: progresión descendente desde un máximo hasta un mínimo.
 - Función infija `step`: establece el incremento o decremento de la progresión.
 - Operador `in` / `!in`: comprueba pertenencia de un elemento a un rango o colección de forma concisa.
@@ -327,7 +334,7 @@ val estaDentro: Boolean = 3 in semiabierto // true
 println("¿3 está en 1..<5?: $estaDentro")
 ```
 
-### Código fuente (`Ejercicio2.4/src/Main.kt`)
+### Código fuente ([`Ejercicio2.4/src/Main.kt`](Ejercicio2.4/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -363,7 +370,8 @@ fun main() {
 
 ## Ejercicio 2.5 · Evaluación en cortocircuito frente a evaluación completa en booleanos
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define dentro de la función `main` tres variables booleanas: `isReady` inicializada a `true`, `isProcessing` inicializada a `false`, e `isExpensive` inicializada a `true`.  
 > Ahora, crea una variable `shortCircuitResult` que use el operador `&&` para evaluar la expresión: `isProcessing && isExpensive`.  
 > Después, crea una variable `fullEvalResult` que use el método `and` (con sintaxis infija) para evaluar exactamente la misma expresión: `isProcessing and isExpensive`.  
@@ -391,7 +399,7 @@ val r1: Boolean = condicion && operacionCostosa()
 val r2: Boolean = condicion and operacionCostosa()
 ```
 
-### Código fuente (`Ejercicio2.5/src/Main.kt`)
+### Código fuente ([`Ejercicio2.5/src/Main.kt`](Ejercicio2.5/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -420,7 +428,8 @@ fun main() {
 
 ## Ejercicio 2.6 · Procesamiento de cadenas, filtrado por código ASCII y cadenas multilínea
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Realiza un programa que solicite por consola una cadena de caracteres y diga para cada carácter si está en mayúscula, si está en minúscula o no es una letra (la 'ñ' no cuenta como letra en este criterio básico), comprobando que el código numérico correspondiente al carácter esté en el rango numérico de los códigos de la `'A'` a la `'Z'`, o de la `'a'` a la `'z'`.  
 > Realiza los siguientes pasos complementarios:
 > - Define dos variables `String`: `firstName` inicializada a `"Alan"`, `lastName` a `"Turing"`, y una variable `yearOfBirth` de tipo `Int` con el valor `1912`.
@@ -446,7 +455,7 @@ val ficha: String = """
 println(ficha)
 ```
 
-### Código fuente (`Ejercicio2.6/src/Main.kt`)
+### Código fuente ([`Ejercicio2.6/src/Main.kt`](Ejercicio2.6/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -504,7 +513,8 @@ fun main() {
 
 ## Ejercicio 2.7 · Tipos nullables frente a no-nullables
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Declara una variable `userName` de tipo `String?` y asígnale el valor `null` inicialmente.  
 > Luego, declara otra variable inmutable, `defaultName`, de tipo `String` (no nullable) y asígnale el valor `"Guest"`.  
 > A continuación, intenta asignar el valor de `userName` a una nueva variable inmutable, `finalName`, de tipo `String` y observa el error de compilación que se produce.  
@@ -526,7 +536,7 @@ var noPuedeSerNulo: String = "Texto"
 // noPuedeSerNulo = puedeSerNulo // Error de compilación: Type mismatch
 ```
 
-### Código fuente (`Ejercicio2.7/src/Main.kt`)
+### Código fuente ([`Ejercicio2.7/src/Main.kt`](Ejercicio2.7/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -546,7 +556,8 @@ fun main() {
 
 ## Ejercicio 2.8 · Jerarquía de tipos: Any y Any?
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Declara una variable inmutable `firstVariable` a la que asignas un literal numérico entero, y otra variable inmutable `secondVariable` a la que asignas la cadena de texto `"Hello World"`.  
 > A continuación, declara una tercera variable inmutable, `thirdVariable`, de tipo explícito `Any`, y asígnale el valor de `firstVariable`.  
 > Finalmente, declara una última variable, `fourthVariable`, de tipo explícito `Any?`, asígnale el valor `null`, y luego, en una línea posterior, intenta asignarle el valor de `secondVariable`.
@@ -565,7 +576,7 @@ var universal: Any? = null  // Válido: Any? admite null
 universal = obj2            // Válido: Any? también admite cualquier objeto no-nulo
 ```
 
-### Código fuente (`Ejercicio2.8/src/Main.kt`)
+### Código fuente ([`Ejercicio2.8/src/Main.kt`](Ejercicio2.8/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -597,14 +608,15 @@ fun main() {
 
 ## Relaciones
 
-- Teoría del tema: [[01 - Introduccion a Kotlin]]
-- Índice de la asignatura: [[DAM/Programacion_Multimedia_y_Dispositivos_Moviles/Indice|Índice de PMDM]]
+- Teoría del tema: 01 - Introduccion a Kotlin
+- Índice de la asignatura: Índice de PMDM
 
 ---
 
 ## Ejercicio 2.9 · Media de un array de notas (DoubleArray)
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Realiza un programa que solicite las notas de 4 exámenes, los almacene en un array, y después recorra el array y obtenga y muestre por pantalla la media aritmética de las notas.
 
 ### Clases y métodos introducidos
@@ -630,7 +642,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio2.9/src/Main.kt`)
+### Código fuente ([`Ejercicio2.9/src/Main.kt`](Ejercicio2.9/src/Main.kt))
 
 ```kotlin
 fun main() {
@@ -658,14 +670,16 @@ fun main() {
 4. **El segundo bucle es de recorrido puro** (`for (nota in notas)`): solo interesa el valor para acumular en `suma`, que debe ser `var` porque se modifica en cada vuelta.
 5. **Media:** `suma / notas.size` — división `Double / Int`; el `Int` se promueve a `Double` en la operación. Con las notas 5, 7, 6, 8 la salida real es `La media de las notas es: 6.5`.
 
-> [!tip] Alternativa de librería
+> [!TIP]
+> **Alternativa de librería**
 > Todo el bloque de acumulación se resume en `notas.average()`, pero el ejercicio pide recorrer el array a mano para practicar los dos estilos de `for`.
 
 ---
 
 ## Ejercicio 2.10 · Variable Any? con contenido aleatorio y rangos
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Crea un programa que declare una variable de tipo `Any?` que podrá contener un valor entero, una cadena de texto o `null`, dependiendo de un número aleatorio entre 0 y 100 generado con `Random.nextInt(lim_inf, lim_sup_no_incluido)` (comprobando que se importa `kotlin.random.Random`). Si el número está en `[0, 33]`, asigna `null`; en `[34, 66]`, el valor `5`; en `[67, 100]`, la cadena `"Baldomero"`. Muestra por pantalla el número generado y el tipo de contenido de la variable.
 
 ### Clases y métodos introducidos
@@ -691,7 +705,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio2.10/src/Main.kt`)
+### Código fuente ([`Ejercicio2.10/src/Main.kt`](Ejercicio2.10/src/Main.kt))
 
 ```kotlin
 import kotlin.random.Random
@@ -723,13 +737,14 @@ fun main() {
 ```
 
 ### Explicación paso a paso
-1. **Una variable, tres tipos:** `Any?` es la cúspide de la jerarquía ([[02 - Jerarquia de tipos]]). Guardar primero un `Int` y luego reemplazarlo por `null`, otro `Int` o un `String` es legal porque todos son subtipos de `Any?`.
+1. **Una variable, tres tipos:** `Any?` es la cúspide de la jerarquía (02 - Jerarquia de tipos). Guardar primero un `Int` y luego reemplazarlo por `null`, otro `Int` o un `String` es legal porque todos son subtipos de `Any?`.
 2. **El aleatorio manda:** `Random.nextInt(0, 100)` genera `0..99`; ese valor inicial determina qué rama se activa. Los tres `IntRange` hacen legible la partición del enunciado.
 3. **`valor in rangoMedio` sobre `Any?`:** funciona porque en ese punto el contenido *real* sigue siendo un `Int` (el primer `if` no lo tocó); Kotlin desempaqueta (*unboxing*) para comparar. Si el contenido no fuera numérico, la comprobación `in` lanzaría excepción en tiempo de ejecución — aquí el flujo la protege.
 4. **Encadenamiento de reemplazos:** si el sorteo cae en `0..33`, el primer bloque asigna `null`, y los dos `if` restantes ya no se activan porque `null in 34..66` es `false`. Los tres bloques son mutuamente excluyentes por construcción de los rangos.
 5. **Salida real (típica):** p. ej. con 71 sorteado → `Salió 71` y `La variable es una cadena de texto: Baldomero`. Como solo se imprime un bloque por ejecución, hay que relanzar el programa para ver los tres casos (o sustituir los tres `if` por un `when (valor)`).
 
-> [!warning] Dos detalles del enunciado vs el código
+> [!WARNING]
+> **Dos detalles del enunciado vs el código**
 > - `nextInt(0, 100)` **nunca genera 100**, así que el `rangoAlto = 67..100` tiene un valor imposible; en la práctica cubre `67..99`.
 > - En la rama nula, el programa imprime `la variable es nula` con minúscula (el enunciado pedía `"La variable es nula"`), y muestra el `null` interpolado (`la variable es nula: null`).
 
@@ -748,9 +763,9 @@ fun main() {
 
 ## Relaciones
 
-- Teoría del tema: [[02 - Jerarquia de tipos]] — `Any?`, `IntRange`, arrays primitivos
-- Bloque anterior de ejercicios: [[01.1 - Ejercicios 1 Introduccion a Kotlin]] (2.1–2.8)
-- Índice de la asignatura: [[DAM/Programacion_Multimedia_y_Dispositivos_Moviles/Indice|Índice de PMDM]]
+- Teoría del tema: 02 - Jerarquia de tipos — `Any?`, `IntRange`, arrays primitivos
+- Bloque anterior de ejercicios: 01.1 - Ejercicios 1 Introduccion a Kotlin (2.1–2.8)
+- Índice de la asignatura: Índice de PMDM
 
 ## Para repasar
 
@@ -778,46 +793,37 @@ fun main() {
 
 ---
 
----
-asignatura: PMDM
-tema: 3
-tipo: ejercicio
-estado: completado
-fecha: 2026-09-23
-tags:
-- DAM/ejercicio
-- DAM/pmdm/kotlin
-- DAM/pmdm/ejercicios
----
 
 # 03.1 · Ejercicios 3: Funciones en Kotlin
 
-> [!info] Origen
-> [[DAM/Programacion_Multimedia_y_Dispositivos_Moviles/Indice|Programación Multimedia y Dispositivos Móviles]] · Tema 3: Kotlin
-> Apuntes relacionados: [[03 - Funciones]] · Boletín anterior: [[02.1 - Ejercicios 2 Jerarquia de Tipos]]
+> [!NOTE]
+> **Origen:**
+> Programación Multimedia y Dispositivos Móviles · Tema 3: Kotlin
+> Apuntes relacionados: 03 - Funciones · Boletín anterior: 02.1 - Ejercicios 2 Jerarquia de Tipos
 > **Ruta fuente:** `/home/Dublem/Documentos/Programas_clase/Programación Multimedia y para Dispositivos Móviles/`
 
 ---
 
 ## Índice de Ejercicios
 
-- [[#Ejercicio 3.1 · Función isPrime con retornos anticipados]]
-- [[#Ejercicio 3.2 · Sintaxis multilínea de parámetros y trailing comma]]
-- [[#Ejercicio 3.3 · Tipo de retorno implícito Unit]]
-- [[#Ejercicio 3.4 · throw como rama de una expresión (tipo Nothing)]]
-- [[#Ejercicio 3.5 · Función de expresión única: año bisiesto]]
-- [[#Ejercicio 3.6 · Sobrecarga de funciones: sumValues]]
-- [[#Ejercicio 3.7 · Parámetros con valores por defecto]]
-- [[#Ejercicio 3.8 · Argumentos con nombre y mezcla de estilos]]
-- [[#Ejercicio 3.9 · Parámetro vararg no posicionado al final]]
-- [[#Ejercicio 3.10 · Spread operator (*) sobre varargs]]
-- [[#Ejercicio 3.11 · Funciones infijas (infix)]]
+- [Ejercicio 3.1 · Función isPrime con retornos anticipados](#ejercicio-31-función-isprime-con-retornos-anticipados)
+- [Ejercicio 3.2 · Sintaxis multilínea de parámetros y trailing comma](#ejercicio-32-sintaxis-multilínea-de-parámetros-y-trailing-comma)
+- [Ejercicio 3.3 · Tipo de retorno implícito Unit](#ejercicio-33-tipo-de-retorno-implícito-unit)
+- [Ejercicio 3.4 · throw como rama de una expresión (tipo Nothing)](#ejercicio-34-throw-como-rama-de-una-expresión-tipo-nothing)
+- [Ejercicio 3.5 · Función de expresión única: año bisiesto](#ejercicio-35-función-de-expresión-única-año-bisiesto)
+- [Ejercicio 3.6 · Sobrecarga de funciones: sumValues](#ejercicio-36-sobrecarga-de-funciones-sumvalues)
+- [Ejercicio 3.7 · Parámetros con valores por defecto](#ejercicio-37-parámetros-con-valores-por-defecto)
+- [Ejercicio 3.8 · Argumentos con nombre y mezcla de estilos](#ejercicio-38-argumentos-con-nombre-y-mezcla-de-estilos)
+- [Ejercicio 3.9 · Parámetro vararg no posicionado al final](#ejercicio-39-parámetro-vararg-no-posicionado-al-final)
+- [Ejercicio 3.10 · Spread operator (*) sobre varargs](#ejercicio-310-spread-operator-sobre-varargs)
+- [Ejercicio 3.11 · Funciones infijas (infix)](#ejercicio-311-funciones-infijas-infix)
 
 ---
 
 ## Ejercicio 3.1 · Función isPrime con retornos anticipados
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Realiza un programa en el que se define una función `isPrime` que reciba un número entero y retorne si es número primo o no. La función `main()` deberá llamar a la función `isPrime` varias veces con valores diferentes para probarla.
 
 ### Clases y métodos introducidos
@@ -839,7 +845,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.1/src/Main.kt`)
+### Código fuente ([`Ejercicio3.1/src/Main.kt`](Ejercicio3.1/src/Main.kt))
 
 ```kotlin
 fun isPrime(entero: Int): Boolean {
@@ -882,7 +888,8 @@ fun main() {
 
 ## Ejercicio 3.2 · Sintaxis multilínea de parámetros y trailing comma
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define una función llamada `calculateMetrics` que acepte exactamente tres parámetros en el siguiente orden: `dataList` de tipo `List<Int>`, `includeAverage` de tipo `Boolean`, y `precisionDigits` de tipo `Int`. Escribe la declaración de la función usando una sintaxis multilínea para los parámetros y asegúrate de incluir el *trailing comma* después del último parámetro. Luego imprime por separado los tres valores que recibe. Finalmente, llama a la función desde `main` utilizando también sintaxis multilínea para los argumentos y el correspondiente *trailing comma*.
 
 ### Clases y métodos introducidos
@@ -907,7 +914,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.2/src/Main.kt`)
+### Código fuente ([`Ejercicio3.2/src/Main.kt`](Ejercicio3.2/src/Main.kt))
 
 ```kotlin
 fun calculateMetrics(
@@ -936,7 +943,8 @@ fun main() {
 
 ## Ejercicio 3.3 · Tipo de retorno implícito Unit
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define dos funciones llamadas `printWelcomeMessage` y `logActivity`. `printWelcomeMessage` debe aceptar un único parámetro `user` de tipo `String` e imprimir un mensaje de bienvenida personalizado. `logActivity` no debe aceptar parámetros, solo imprimir la cadena `"Activity logged"`. No especifiques un tipo de retorno explícito para ninguna de las dos. En `main`, guarda el resultado de cada llamada en variables inmutables `resultOne` y `resultTwo` e imprime sus valores.
 
 ### Clases y métodos introducidos
@@ -955,7 +963,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.3/src/Main.kt`)
+### Código fuente ([`Ejercicio3.3/src/Main.kt`](Ejercicio3.3/src/Main.kt))
 
 ```kotlin
 fun printWelcomeMessage(user: String) {
@@ -983,7 +991,8 @@ fun main() {
 
 ## Ejercicio 3.4 · throw como rama de una expresión (tipo Nothing)
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define una función `validateValue` que acepte un único parámetro `inputNumber` de tipo `Int` y devuelva un `String`. Dentro, utiliza una expresión `if`: si `inputNumber` es mayor que cero, retorna `"Value is positive"`; si no, debe lanzar una `IllegalArgumentException` con el mensaje `"Input must be greater than zero"`. Asegúrate de que el `if` se use como una expresión y que la excepción actúe como la rama `else`.
 
 ### Clases y métodos introducidos
@@ -1003,7 +1012,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.4/src/Main.kt`)
+### Código fuente ([`Ejercicio3.4/src/Main.kt`](Ejercicio3.4/src/Main.kt))
 
 ```kotlin
 fun validateValue(inputNumber: Int): String {
@@ -1026,7 +1035,8 @@ fun main() {
 
 ## Ejercicio 3.5 · Función de expresión única: año bisiesto
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Realiza un programa en el que definas una función `isLeapYear` que reciba un año e indique si es bisiesto o no, calculándolo mediante una única expresión. Prueba la función con distintos valores.
 
 ### Clases y métodos introducidos
@@ -1044,7 +1054,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.5/src/Main.kt`)
+### Código fuente ([`Ejercicio3.5/src/Main.kt`](Ejercicio3.5/src/Main.kt))
 
 ```kotlin
 fun isLeapYear(year: Int): Boolean = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
@@ -1073,7 +1083,8 @@ fun main() {
 
 ## Ejercicio 3.6 · Sobrecarga de funciones: sumValues
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define tres funciones sobrecargadas en el ámbito principal, todas con el nombre `sumValues`: la primera acepta dos `Int` y retorna su suma como `Int`; la segunda acepta un array de `Double` llamado `doubleValues` y retorna la suma como `Double`; la tercera acepta un `String` `prefix` y un `Int` `count` y retorna una `String` con el `prefix` repetido `count` veces. En `main`, prueba cada versión y guarda los resultados en `resultInt`, `resultDouble` y `resultString`.
 
 ### Clases y métodos introducidos
@@ -1096,7 +1107,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.6/src/Main.kt`)
+### Código fuente ([`Ejercicio3.6/src/Main.kt`](Ejercicio3.6/src/Main.kt))
 
 ```kotlin
 fun sumValues(firstNumber: Int, secondNumber: Int): Int {
@@ -1140,7 +1151,8 @@ fun main() {
 
 ## Ejercicio 3.7 · Parámetros con valores por defecto
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define una función `configurePrintJob` que acepte tres parámetros inmutables: `fileName` de tipo `String` sin valor por defecto (obligatorio), `pageSize` de tipo `Int` con valor por defecto `200`, e `isColorMode` de tipo `Boolean` con valor por defecto `false`. Dentro, imprime una línea con el valor de cada parámetro. En `main`, realiza cuatro llamadas: solo el obligatorio; obligatorio + `pageSize` en orden; el obligatorio más `isColorMode` con argumento nombrado (dejando `pageSize` por defecto); y los tres completos.
 
 ### Clases y métodos introducidos
@@ -1161,7 +1173,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.7/src/Main.kt`)
+### Código fuente ([`Ejercicio3.7/src/Main.kt`](Ejercicio3.7/src/Main.kt))
 
 ```kotlin
 fun configurePrintJob(
@@ -1191,7 +1203,8 @@ fun main() {
 
 ## Ejercicio 3.8 · Argumentos con nombre y mezcla de estilos
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define la función `generateReport(reportTitle: String, startDate: String, endDate: String = "Today", detailedView: Boolean = true, watermarkText: String? = null)` que imprima todos sus parámetros separados por comas. En `main`, llámala tres veces: (1) `reportTitle` y `startDate` posicionales y `watermarkText` por nombre, con el resto por defecto; (2) los tres `String` en orden invertido usando solo argumentos nombrados; (3) mezcla: dos posicionales y `detailedView` por nombre.
 
 ### Clases y métodos introducidos
@@ -1211,7 +1224,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.8/src/Main.kt`)
+### Código fuente ([`Ejercicio3.8/src/Main.kt`](Ejercicio3.8/src/Main.kt))
 
 ```kotlin
 fun generateReport(
@@ -1241,10 +1254,12 @@ fun main() {
 
 ## Ejercicio 3.9 · Parámetro vararg no posicionado al final
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Define una función `analyzeScores` que acepte, en este orden: `minThreshold: Int`, `scores` marcado como `vararg Int`, y `sortAscending: Boolean = true`. Dentro, imprime `minThreshold` e itera `scores` imprimiendo cada puntuación. En `main`, haz dos llamadas: la primera con `minThreshold` y cuatro puntuaciones (defectos activados); la segunda con `minThreshold`, dos puntuaciones y `sortAscending = false` **con nombre**, para que el compilador no lo confunda con una puntuación más.
 
-> [!warning] Detalle del código real
+> [!WARNING]
+> **Detalle del código real**
 > En la fuente la función se escribió `analyizeScores` (con `i` de más) en lugar de `analyzeScores`. No es error de compilación — es un *typo* que sobrevive porque definición y llamadas coinciden. Aquí se reproduce tal cual está en el repositorio.
 
 ### Clases y métodos introducidos
@@ -1265,7 +1280,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.9/src/Main.kt`)
+### Código fuente ([`Ejercicio3.9/src/Main.kt`](Ejercicio3.9/src/Main.kt))
 
 ```kotlin
 fun analiyzeScores(
@@ -1301,7 +1316,8 @@ fun main() {
 
 ## Ejercicio 3.10 · Spread operator (*) sobre varargs
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Escribe una función `calculateAverage` que reciba una lista variable de números enteros y calcule su media aritmética; `main()` la llamará con los valores de un `IntArray` definido previamente. Define además `combineData(dataChunks: vararg Int)` que imprima cada valor en una línea. En `main`, declara `initialSet` (10, 20, 30) y `extraSet` (40, 50) y llama a `combineData` pasándole, en una sola línea, todos los elementos de ambos arrays.
 
 ### Clases y métodos introducidos
@@ -1324,7 +1340,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.10/src/Main.kt`)
+### Código fuente ([`Ejercicio3.10/src/Main.kt`](Ejercicio3.10/src/Main.kt))
 
 ```kotlin
 fun calculateAverage(vararg numbers: Int): Int {
@@ -1363,7 +1379,8 @@ fun main() {
 
 ## Ejercicio 3.11 · Funciones infijas (infix)
 
-> [!question] Enunciado
+> [!NOTE]
+> **Enunciado:**
 > Escribe una clase `De0a100` que represente un rango de enteros de 0 a 100 y defina una función infija `contains` que verifique si un número está dentro del rango. Define otra clase simple `ActionExecutor` (sin propiedades ni constructor) con una función `infix perform(actionName: String)` que imprima `"Executing action: "` seguido del nombre. En `main`, crea una instancia de `ActionExecutor` y llama a `perform` dos veces para la acción `"Cleanup"`: con notación estándar (punto y paréntesis) y con notación infija.
 
 ### Clases y métodos introducidos
@@ -1386,7 +1403,7 @@ fun main() {
 }
 ```
 
-### Código fuente (`Ejercicio3.11/src/Main.kt`)
+### Código fuente ([`Ejercicio3.11/src/Main.kt`](Ejercicio3.11/src/Main.kt))
 
 ```kotlin
 class de0a100 {
@@ -1416,24 +1433,6 @@ fun main() {
 3. **El `main` no ejercita `de0a100`:** queda solo definida la clase. Prueba mínima: `val d = de0a100(); println(42 in d); println(d contains 101)` → `true`, `false`.
 4. **Infracción de convención detectada:** la fuente declara `class de0a100` en minúscula (el enunciado pedía `De0a100`). Kotlin no lo prohíbe, pero rompe PascalCase del resto de clases y se recomienda corregirlo.
 5. **Ejemplos de infix ya conocidas:** `to` (`"a" to 1`), `step` (`1 step 2`), `in` — todas cumplen los tres requisitos.
-
----
-
-## Esquema resumen de conceptos clave
-
-| Concepto | Sintaxis | Comportamiento fundamental |
-| --- | --- | --- |
-| Retornos anticipados | `if (cond) return x` | Cada `return` corta la función; patrón de cláusulas de guarda. |
-| Multilínea + coma final | `p: Int,` (última línea) | Diffs Git limpios: añadir parámetro = añadir línea. |
-| Tipo Unit | `fun f() { }` | Sin tipo de retorno explícito → `Unit`, valor real asignable e imprimible. |
-| Tipo Nothing | `throw E(...)` | Expresión que nunca retorna; válida como rama `else` de cualquier expresión. |
-| Expresión única | `fun f(): T = expr` | El valor de la expresión es el retorno; `if`-expresión asignable. |
-| Sobrecarga | mismo nombre, otra firma | Ligadura estática; el retorno no distingue versiones. |
-| Valores por defecto | `p: T = valor` | Obligatorios antes que opcionales; sustituyen sobrecargas Java. |
-| Argumentos nombrados | `p = valor` | Orden libre si todos son nombrados; posicionales solo al principio. |
-| vararg | `vararg p: T` | Es un array dentro; si no es el último, lo posterior exige nombre. |
-| Spread | `f(*arr)` | Desempaqueta arrays en argumentos; combinable varios por llamada. |
-| infix | `infix fun p(x: T)` | Sin punto ni paréntesis; 1 parámetro, no vararg ni default. |
 
 ---
 
