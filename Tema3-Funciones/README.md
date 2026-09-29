@@ -10,17 +10,17 @@
 
 ## Índice de Ejercicios
 
-- [Ejercicio 3.1 · Función isPrime con retornos anticipados](#ejercicio-31-función-isprime-con-retornos-anticipados)
-- [Ejercicio 3.2 · Sintaxis multilínea de parámetros y trailing comma](#ejercicio-32-sintaxis-multilínea-de-parámetros-y-trailing-comma)
-- [Ejercicio 3.3 · Tipo de retorno implícito Unit](#ejercicio-33-tipo-de-retorno-implícito-unit)
-- [Ejercicio 3.4 · throw como rama de una expresión (tipo Nothing)](#ejercicio-34-throw-como-rama-de-una-expresión-tipo-nothing)
-- [Ejercicio 3.5 · Función de expresión única: año bisiesto](#ejercicio-35-función-de-expresión-única-año-bisiesto)
-- [Ejercicio 3.6 · Sobrecarga de funciones: sumValues](#ejercicio-36-sobrecarga-de-funciones-sumvalues)
-- [Ejercicio 3.7 · Parámetros con valores por defecto](#ejercicio-37-parámetros-con-valores-por-defecto)
-- [Ejercicio 3.8 · Argumentos con nombre y mezcla de estilos](#ejercicio-38-argumentos-con-nombre-y-mezcla-de-estilos)
-- [Ejercicio 3.9 · Parámetro vararg no posicionado al final](#ejercicio-39-parámetro-vararg-no-posicionado-al-final)
-- [Ejercicio 3.10 · Spread operator (*) sobre varargs](#ejercicio-310-spread-operator-sobre-varargs)
-- [Ejercicio 3.11 · Funciones infijas (infix)](#ejercicio-311-funciones-infijas-infix)
+- [Ejercicio 3.1 · Función isPrime con retornos anticipados](#ejercicio-31--función-isprime-con-retornos-anticipados)
+- [Ejercicio 3.2 · Sintaxis multilínea de parámetros y trailing comma](#ejercicio-32--sintaxis-multilínea-de-parámetros-y-trailing-comma)
+- [Ejercicio 3.3 · Tipo de retorno implícito Unit](#ejercicio-33--tipo-de-retorno-implícito-unit)
+- [Ejercicio 3.4 · throw como rama de una expresión (tipo Nothing)](#ejercicio-34--throw-como-rama-de-una-expresión-tipo-nothing)
+- [Ejercicio 3.5 · Función de expresión única: año bisiesto](#ejercicio-35--función-de-expresión-única-año-bisiesto)
+- [Ejercicio 3.6 · Sobrecarga de funciones: sumValues](#ejercicio-36--sobrecarga-de-funciones-sumvalues)
+- [Ejercicio 3.7 · Parámetros con valores por defecto](#ejercicio-37--parámetros-con-valores-por-defecto)
+- [Ejercicio 3.8 · Argumentos con nombre y mezcla de estilos](#ejercicio-38--argumentos-con-nombre-y-mezcla-de-estilos)
+- [Ejercicio 3.9 · Parámetro vararg no posicionado al final](#ejercicio-39--parámetro-vararg-no-posicionado-al-final)
+- [Ejercicio 3.10 · Spread operator (*) sobre varargs](#ejercicio-310--spread-operator--sobre-varargs)
+- [Ejercicio 3.11 · Funciones infijas (infix)](#ejercicio-311--funciones-infijas-infix)
 
 ---
 

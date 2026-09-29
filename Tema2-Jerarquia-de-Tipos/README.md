@@ -10,28 +10,28 @@
 
 ## Índice de Ejercicios
 
-- [Ejercicio 2.1 · Tipo Number y análisis de pérdida de precisión en conversiones](#ejercicio-21-tipo-number-y-análisis-de-pérdida-de-precisión-en-conversiones)
-- [Ejercicio 2.2 · Números gigantes con BigInteger](#ejercicio-22-números-gigantes-con-biginteger)
-- [Ejercicio 2.3 · Tipo Char, código Unicode y seguridad de tipos](#ejercicio-23-tipo-char-código-unicode-y-seguridad-de-tipos)
-- [Ejercicio 2.4 · Rangos cerrados, abiertos, progresiones y operador in](#ejercicio-24-rangos-cerrados-abiertos-progresiones-y-operador-in)
-- [Ejercicio 2.5 · Evaluación en cortocircuito frente a evaluación completa en booleanos](#ejercicio-25-evaluación-en-cortocircuito-frente-a-evaluación-completa-en-booleanos)
-- [Ejercicio 2.6 · Procesamiento de cadenas, filtrado por código ASCII y cadenas multilínea](#ejercicio-26-procesamiento-de-cadenas-filtrado-por-código-ascii-y-cadenas-multilínea)
-- [Ejercicio 2.7 · Tipos nullables frente a no-nullables](#ejercicio-27-tipos-nullables-frente-a-no-nullables)
-- [Ejercicio 2.8 · Jerarquía de tipos: Any y Any?](#ejercicio-28-jerarquía-de-tipos-any-y-any)
-- [Ejercicio 2.9 · Media de un array de notas (DoubleArray)](#ejercicio-29-media-de-un-array-de-notas-doublearray)
-- [Ejercicio 2.10 · Variable Any? con contenido aleatorio y rangos](#ejercicio-210-variable-any-con-contenido-aleatorio-y-rangos)
-- [Ejercicio 2.11 · Boxing: Array<Int> frente a IntArray](#ejercicio-211-boxing-arrayint-frente-a-intarray)
-- [Ejercicio 2.12 · Precisión decimal: Double frente a BigDecimal](#ejercicio-212-precisión-decimal-double-frente-a-bigdecimal)
-- [Ejercicio 2.13 · Plantillas de cadena avanzadas y StringBuilder](#ejercicio-213-plantillas-de-cadena-avanzadas-y-stringbuilder)
-- [Ejercicio 2.14 · Tipo frente a clase: herencia, interfaces y Liskov](#ejercicio-214-tipo-frente-a-clase-herencia-interfaces-y-liskov)
-- [Ejercicio 2.15 · Comprobación de tipo: is, !is y smart cast](#ejercicio-215-comprobación-de-tipo-is-is-y-smart-cast)
-- [Ejercicio 2.16 · Creación, copia y conversión de arrays](#ejercicio-216-creación-copia-y-conversión-de-arrays)
-- [Ejercicio 2.17 · Rangos de coma flotante: .. y ..](#ejercicio-217-rangos-de-coma-flotante--y-)
-- [Ejercicio 2.18 · Booleanos: cortocircuito y métodos infix and/or](#ejercicio-218-booleanos-cortocircuito-y-métodos-infix-andor)
-- [Ejercicio 2.19 · Restricciones del compilador sobre tipos nullables](#ejercicio-219-restricciones-del-compilador-sobre-tipos-nullables)
-- [Ejercicio 2.20 · Concatenación con + y comparación de cadenas](#ejercicio-220-concatenación-con--y-comparación-de-cadenas)
-- [Ejercicio 2.21 · Literales numéricos: sufijos, separadores e inferencia](#ejercicio-221-literales-numéricos-sufijos-separadores-e-inferencia)
-- [Ejercicio 2.22 · copyOf/copyOfNullable y huecos null](#ejercicio-222-copyofcopyofnullable-y-huecos-null)
+- [Ejercicio 2.1 · Tipo Number y análisis de pérdida de precisión en conversiones](#ejercicio-21--tipo-number-y-análisis-de-pérdida-de-precisión-en-conversiones)
+- [Ejercicio 2.2 · Números gigantes con BigInteger](#ejercicio-22--números-gigantes-con-biginteger)
+- [Ejercicio 2.3 · Tipo Char, código Unicode y seguridad de tipos](#ejercicio-23--tipo-char-código-unicode-y-seguridad-de-tipos)
+- [Ejercicio 2.4 · Rangos cerrados, abiertos, progresiones y operador in](#ejercicio-24--rangos-cerrados-abiertos-progresiones-y-operador-in)
+- [Ejercicio 2.5 · Evaluación en cortocircuito frente a evaluación completa en booleanos](#ejercicio-25--evaluación-en-cortocircuito-frente-a-evaluación-completa-en-booleanos)
+- [Ejercicio 2.6 · Procesamiento de cadenas, filtrado por código ASCII y cadenas multilínea](#ejercicio-26--procesamiento-de-cadenas-filtrado-por-código-ascii-y-cadenas-multilínea)
+- [Ejercicio 2.7 · Tipos nullables frente a no-nullables](#ejercicio-27--tipos-nullables-frente-a-no-nullables)
+- [Ejercicio 2.8 · Jerarquía de tipos: Any y Any?](#ejercicio-28--jerarquía-de-tipos-any-y-any)
+- [Ejercicio 2.9 · Media de un array de notas (DoubleArray)](#ejercicio-29--media-de-un-array-de-notas-doublearray)
+- [Ejercicio 2.10 · Variable Any? con contenido aleatorio y rangos](#ejercicio-210--variable-any-con-contenido-aleatorio-y-rangos)
+- [Ejercicio 2.11 · Boxing: `Array<Int>` frente a `IntArray`](#ejercicio-211--boxing-arrayint-frente-a-intarray)
+- [Ejercicio 2.12 · Precisión decimal: Double frente a BigDecimal](#ejercicio-212--precisión-decimal-double-frente-a-bigdecimal)
+- [Ejercicio 2.13 · Plantillas de cadena avanzadas y StringBuilder](#ejercicio-213--plantillas-de-cadena-avanzadas-y-stringbuilder)
+- [Ejercicio 2.14 · Tipo frente a clase: herencia, interfaces y Liskov](#ejercicio-214--tipo-frente-a-clase-herencia-interfaces-y-liskov)
+- [Ejercicio 2.15 · Comprobación de tipo: is, !is y smart cast](#ejercicio-215--comprobación-de-tipo-is-is-y-smart-cast)
+- [Ejercicio 2.16 · Creación, copia y conversión de arrays](#ejercicio-216--creación-copia-y-conversión-de-arrays)
+- [Ejercicio 2.17 · Rangos de coma flotante: `..` y `..<`](#ejercicio-217--rangos-de-coma-flotante--y-)
+- [Ejercicio 2.18 · Booleanos: cortocircuito y métodos infix and/or](#ejercicio-218--booleanos-cortocircuito-y-métodos-infix-andor)
+- [Ejercicio 2.19 · Restricciones del compilador sobre tipos nullables](#ejercicio-219--restricciones-del-compilador-sobre-tipos-nullables)
+- [Ejercicio 2.20 · Concatenación con + y comparación de cadenas](#ejercicio-220--concatenación-con--y-comparación-de-cadenas)
+- [Ejercicio 2.21 · Literales numéricos: sufijos, separadores e inferencia](#ejercicio-221--literales-numéricos-sufijos-separadores-e-inferencia)
+- [Ejercicio 2.22 · copyOf/copyOfNullable y huecos null](#ejercicio-222--copyofcopyofnullable-y-huecos-null)
 
 ---
 
@@ -718,7 +718,7 @@ fun main() {
 > [!NOTE]
 > **Documentación añadida:** las entradas 2.11–2.22 se derivan directamente del código fuente (no del boletín original). El `Objetivo` resume el comentario de cabecera de cada `Main.kt`.
 
-## Ejercicio 2.11 · Boxing: Array<Int> frente a IntArray
+## Ejercicio 2.11 · Boxing: `Array<Int>` frente a `IntArray`
 
 > [!NOTE]
 > **Objetivo:** comparar el boxing automático de Kotlin (`Array<Int>`, genéricos, tipos nullables) con los arrays de primitivos sin boxing (`IntArray`).
@@ -1013,7 +1013,7 @@ fun main() {
 
 ---
 
-## Ejercicio 2.17 · Rangos de coma flotante: .. y ..
+## Ejercicio 2.17 · Rangos de coma flotante: `..` y `..<`
 
 > [!NOTE]
 > **Objetivo:** usar rangos de coma flotante `ClosedFloatingPointRange` con `..` (cerrado) y `..<` (abierto por la derecha), y comprobar pertenencia con `in` / `!in`.

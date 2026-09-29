@@ -10,7 +10,7 @@
 
 ## Índice de Ejercicios
 
-- [Ejercicio 1.1 · Ordenar tres números enteros por consola](#ejercicio-11-ordenar-tres-números-enteros-por-consola)
+- [Ejercicio 1.1 · Ordenar tres números enteros por consola](#ejercicio-11--ordenar-tres-números-enteros-por-consola)
 
 ---
 
